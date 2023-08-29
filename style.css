@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 5rem;
+}
+
+body{
+    background: white;
+}
+
+section{
+    padding: 50px 10%;
+}
+
+.header{
+    background: #00704A; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 1rem solid #00704A;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+}
+
+#logo img {
+    width: 60px;
+    height: auto;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+.navbar .btn{
+    display: inline-block;
+    padding: .10rem 5rem;
+    color: white;
+    background: #00704A;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.navbar .btn:hover{
+    background: white;
+    color: black;
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #ebdbc8;
+    gap: 1rem;
+    display: flex
+}
+
+.home-text{
+    font-size: large;
+}
+
+.home-text span{
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.home-text h3{
+    color: #00704A;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.home-text h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.home-img{
+    flex: 1 1 17rem;
+}
+
+.home-img img{
+    width: 45rem;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-11px, 0);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+
+.btn{
+  padding: 7px 14px;
+  border: 2px solid black;
+  border-radius: 35px;
+  color: black;
+  font-weight: 500;
+}
+
+.btn:hover{
+    background: #00704A;
+    color: white;
+}
+
+.heading{
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: #00704A;
+    text-transform: uppercase;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    color: #00704A;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #00704A;
+    text-transform: uppercase;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1.0;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem ;
+    }
+}
+
+@media (max-width: 768px) { 
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem );
+    }
+
+    .header .navbar.active{
+        right: 0 ;
+    }
+
+    .header .navbar a {
+        color: black;
+        display: block;
+        margin: 1.5rem;
+        padding: .50rem;
+        font-size: 2rem;
+    }
+
+    .home-text{
+        padding-top: inherit;
+        margin-bottom: -20rem;
+    }
+
+    .home-text span {
+        font-size: 0.9rem;
+    }
+    .home-text h2{
+        font-size: 2.4rem;
+    }
+    .home-text h3{
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+}
